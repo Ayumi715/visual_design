@@ -6,8 +6,13 @@
 </head>
 <body>
     <p>Mon May 20 2024 17:00:01 GMT +0900(日本標準時)</p>
-    <center><h1>コンピューターグラフィックス</h1>
     <p>担当　田中あゆ</p></center>
+    <p id="time"></p>
+    <script>
+        const now =new Date();
+        document.getElemnetById("time").textContent=now.toString();
+    </script>
+    <center><h1>コンピューターグラフィックス</h1>
     <p>この授業では、WebGLを用いてコンピューターグラフィックスを作成します。</p>
     <p>よろしくお願いします。</p>
     <img src="ganba.png" alt="頑張れ">
