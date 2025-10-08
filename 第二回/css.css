@@ -16,6 +16,9 @@ body.design{/*index_3の背景*/
   background: #000000 url(bridge.JPG) no-repeat center center;
   background-size: cover;
 }
+body.five{/*html5の背景*/
+  background: #bbcce8 ;
+}
 .highlight {/*文字の色*/
   color: #08f830;
 }
