@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  color: #ffffff;
+  background: #000000
+}
+h1,h3 {
+  margin: 80px 0 0 80px;
+  text-align: center;
+  font: bold italic x-large "Times New Roman",Times,serif;
+}
+body.pc {/*index_2の背景*/
+  background: #000033 url(bridge.JPG) no-repeat center center fixed;
+  background-size: cover;
+}
+body.design{/*index_3の背景*/
+  background: #000000 url(bridge.JPG) no-repeat center center;
+  background-size: cover;
+}
+body.five{/*html5の背景*/
+  background: #bbcce8 ;
+}
+.highlight {/*文字の色*/
+  color: #08f830;
+}
+.highlight3 {/*文字の色*/
+  color: #f81808;
+}
+.underline-strong {/*下線部*/
+  text-decoration: underline;
+  text-decoration-color: #ffcc00; /* 下線の色 */
+  text-decoration-thickness: 2px; /* 下線の太さ */
+}
+
+
+
+
