@@ -1,0 +1,76 @@
+ul.ddmenu {
+   margin: 0px;               
+   padding: 0px 0px 0px 15px;
+   background-color: #cc0000;
+ }
+ ul.ddmenu li {
+    width: 125px;           
+   display: inline-block;
+   list-style-type: none;
+   position: relative;
+ }
+ ul.ddmenu a {
+   background-color: #cc0000;
+   color: white;              
+   line-height: 40px;         
+   text-align: center;   
+   text-decoration: none;
+   font-weight: bold;         
+   display: block;           
+}
+ul.ddmenu ul {
+   display: none;
+   margin: 0px; 
+   padding: 0px;
+   position: absolute;
+ }
+ ul.ddmenu a:hover {
+  background-color: #ffdddd;
+  color: #dd0000;            
+ }
+ ul.ddmenu li:hover ul {
+  display: block;      
+ }
+ 
+html,body{
+  background-color:#ffc0cd;
+  margin: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex: 1;
+  background-color:#edef70;
+}
+
+.first{
+  background-color:#73dae1;
+  margin-top: 3vh;
+}
+.cake{
+  img{
+    width:100%;
+  }
+ .shop{
+    background-color: #edef70;
+    width: 100%;
+  }
+  .cakes{
+    background-color: #88fc04;
+    width:50%;
+  }
+  .wrap{
+    background-color: #037386;
+    display:flex;
+    flex-wrap:wrap;
+  }
+}
+
+footer {
+  background: #e69421;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+}
