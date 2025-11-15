@@ -1,0 +1,153 @@
+ul.ddmenu {
+  margin: 0;
+  padding: 0;
+  background-color: #375230;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+ul.ddmenu li {
+  list-style-type: none;
+  position: relative;
+  text-align: center;
+  flex: 1;
+  white-space: nowrap;
+}
+
+ul.ddmenu a {
+  background-color: #375230;
+  color: white;
+  line-height: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+ul.ddmenu ul {
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+ul.ddmenu a:hover {
+  color: #375230;
+  background-color: #c3dda8;
+}
+
+ul.ddmenu li:hover ul {
+  display: block;
+}
+
+ 
+html,body{
+  background-color:#c3dda8;
+  margin: 0;
+  height:100%
+}
+
+.container {
+  display: flex;
+}
+
+.left {
+  width: 70%;
+}
+
+.right {
+  width: 30%;
+  background-color: #e0e0e0;
+}
+
+section {
+  background-color: #e6c9a8;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex: 1;
+  background-color:#e6c9a8;
+}
+
+.breadth {/*コースメニュー横並び*/
+  /*background-color: #dce6a8;*/
+  padding: 40px 20px;
+  text-align: center;
+}
+.menu-container {
+  display: flex;
+  justify-content: center; /* 中央寄せ */
+  align-items: flex-start;
+  gap: 20px;               /* カード同士の余白 */
+}
+
+.menu-item {
+  width: 28%;              /* 3枚並ぶように調整（余白込み） */
+  /*background-color: #e7b67b;*/
+    background-color: #dce6a8;
+
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 画像をカード幅に合わせて調整 */
+.menu-item img {
+  width: 100%;
+  height: 220px;          /* ← 統一したい高さを指定 */
+  object-fit: cover;      /* 画像をトリミングして均一表示 */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* ホバーしたときの動き（浮かび上がる） */
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+/* スマホ対応（600px以下では1列） */
+@media (max-width: 600px) {
+  .menu-item {
+    width: 90%;
+  }
+}
+
+.cake{
+  img{
+    width:100%;
+  }
+ .shop{
+    width: 100%;
+  }
+  .cakes{
+    width:50%;
+  }
+  .wrap{
+    /*background-color: #037386;*/
+    display:flex;
+    flex-wrap:wrap;
+  }
+}
+
+footer {
+  background: #e69421;
+  color: #fff;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+  font-size: 0.9em;
+}
