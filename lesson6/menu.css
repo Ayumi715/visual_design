@@ -119,11 +119,11 @@ section {
 }
 
 /* スマホ対応（600px以下では1列） */
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   .menu-item {
     width: 90%;
   }
-}
+}*/
 
 .cake{
   img{
@@ -150,4 +150,5 @@ footer {
   padding: 10px;
   font-size: 0.9em;
 }
+
 
