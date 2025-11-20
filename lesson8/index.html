@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>JavaScriptを使った簡単な電卓</title>
+</head>
+
+<body>
+  <h1>２つの整数の計算</h1>
+  <form>
+    A= <input type="text" id="a"> <br>
+    B= <input type="text" id="b"> <br>
+    <input type="button" id="btnAdd" value="足し算">
+    <input type="button" id="btnSub" value="引き算">
+    <input type="button" id="btnMul" value="乗算">
+    <input type="button" id="btnDiv" value="割算"><br>
+    答え= <input type="text" id="kotae">
+  </form>
+  <br>
+  <form>
+    <label for="comments">自由記述欄 (文字数をオーバーした文字は表示されません)</label><br>
+    <textarea id="comments" name="comments" maxlength="300" rows="7" cols="40" placeholder="感想とかなんでもいいよ(^-^)"></textarea><br>
+    <p>現在の文字数: <span id="charCount">0</span> / 300</p>
+    <button type="button" id="dummySubmit">送信</button>
+  </form>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+        function tasu() {
+            const v1 = document.getElementById("a").value;
+            const v2 = document.getElementById("b").value;
+            const ans = Number(v1) + Number(v2);
+            document.getElementById("kotae").value = ans;
+        }
+
+        function hiku() {
+            const v1 = document.getElementById("a").value;
+            const v2 = document.getElementById("b").value;
+            const ans = Number(v1) - Number(v2);
+            document.getElementById("kotae").value = ans;
+        }
+
+        function kakeru() {
+            const v1 = document.getElementById("a").value;
+            const v2 = document.getElementById("b").value;
+            const ans = Number(v1) * Number(v2);
+            document.getElementById("kotae").value = ans;
+        }
+
+        function waru() {
+            const v1 = document.getElementById("a").value;
+            const v2 = document.getElementById("b").value;
+            if (Number(v2) === 0) {
+                alert("0で割ることはできません");
+            return;
+            }
+            const ans = Number(v1) / Number(v2);
+            document.getElementById("kotae").value = ans;
+        }
+
+        const textarea = document.getElementById('comments');
+        const charCount = document.getElementById('charCount');
+        const dummySubmitButton = document.getElementById("dummySubmit");
+        const maxLength = parseInt(textarea.getAttribute('maxlength'), 10) || 0;
+        
+        textarea.addEventListener('input', function() {
+            const currentLength = this.value.length;
+            charCount.textContent = currentLength;
+            if (currentLength >= maxLength) {
+                charCount.style.color = 'red';
+            } else {
+                charCount.style.color = 'inherit';
+            }
+        });
+        
+        dummySubmitButton.addEventListener("click", function() {
+            const currentLength = textarea.value.length;
+            alert("送信ボタンが押されました！\n（フォームの送信処理はキャンセルされています）");
+            textarea.value = '';
+            charCount.textContent = '0';
+            charCount.style.color = 'inherit';
+        });
+    });
+    </script>
+</body>
+</html>
