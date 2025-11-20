@@ -8,12 +8,12 @@
 <body>
   <h1>２つの整数の計算</h1>
   <form>
-    A= <input type="text" id="a"> <br>
-    B= <input type="text" id="b"> <br>
-    <input type="button" id="btnAdd" value="足し算">
-    <input type="button" id="btnSub" value="引き算">
-    <input type="button" id="btnMul" value="乗算">
-    <input type="button" id="btnDiv" value="割算"><br>
+    A= <input type="text" id="a"><br>
+    B= <input type="text" id="b"><br>
+    <input type="button" onclick="tasu()" value="足し算">
+    <input type="button" onclick="hiku()" value="引き算">
+    <input type="button" onclick="kakeru()" value="乗算">
+    <input type="button" onclick="waru()" value="割算"><br>
     答え= <input type="text" id="kotae">
   </form>
   <br>
@@ -25,62 +25,61 @@
   </form>
 
   <script>
-    window.addEventListener('DOMContentLoaded', function() {
-        function tasu() {
-            const v1 = document.getElementById("a").value;
-            const v2 = document.getElementById("b").value;
-            const ans = Number(v1) + Number(v2);
-            document.getElementById("kotae").value = ans;
-        }
+    function tasu() {
+        const v1 = document.getElementById("a").value;
+        const v2 = document.getElementById("b").value;
+        const ans = Number(v1) + Number(v2);
+        document.getElementById("kotae").value = ans;
+    }
 
-        function hiku() {
-            const v1 = document.getElementById("a").value;
-            const v2 = document.getElementById("b").value;
-            const ans = Number(v1) - Number(v2);
-            document.getElementById("kotae").value = ans;
-        }
+    function hiku() {
+        const v1 = document.getElementById("a").value;
+        const v2 = document.getElementById("b").value;
+        const ans = Number(v1) - Number(v2);
+        document.getElementById("kotae").value = ans;
+    }
 
-        function kakeru() {
-            const v1 = document.getElementById("a").value;
-            const v2 = document.getElementById("b").value;
-            const ans = Number(v1) * Number(v2);
-            document.getElementById("kotae").value = ans;
-        }
+    function kakeru() {
+        const v1 = document.getElementById("a").value;
+        const v2 = document.getElementById("b").value;
+        const ans = Number(v1) * Number(v2);
+        document.getElementById("kotae").value = ans;
+    }
 
-        function waru() {
-            const v1 = document.getElementById("a").value;
-            const v2 = document.getElementById("b").value;
-            if (Number(v2) === 0) {
-                alert("0で割ることはできません");
-            return;
-            }
-            const ans = Number(v1) / Number(v2);
-            document.getElementById("kotae").value = ans;
+    function waru() {
+        const v1 = document.getElementById("a").value;
+        const v2 = document.getElementById("b").value;
+        if (Number(v2) === 0) {
+            alert("0で割ることはできません");
+        return;
         }
+        const ans = Number(v1) / Number(v2);
+        document.getElementById("kotae").value = ans;
+    }
 
-        const textarea = document.getElementById('comments');
-        const charCount = document.getElementById('charCount');
-        const dummySubmitButton = document.getElementById("dummySubmit");
-        const maxLength = parseInt(textarea.getAttribute('maxlength'), 10) || 0;
-        
-        textarea.addEventListener('input', function() {
-            const currentLength = this.value.length;
-            charCount.textContent = currentLength;
-            if (currentLength >= maxLength) {
-                charCount.style.color = 'red';
-            } else {
-                charCount.style.color = 'inherit';
-            }
-        });
-        
-        dummySubmitButton.addEventListener("click", function() {
-            const currentLength = textarea.value.length;
-            alert("送信ボタンが押されました！\n（フォームの送信処理はキャンセルされています）");
-            textarea.value = '';
-            charCount.textContent = '0';
+    const textarea = document.getElementById('comments');
+    const charCount = document.getElementById('charCount');
+    const dummySubmitButton = document.getElementById("dummySubmit");
+    const maxLength = parseInt(textarea.getAttribute('maxlength'), 10) || 0;
+    
+    textarea.addEventListener('input', function() {
+        const currentLength = this.value.length;
+        charCount.textContent = currentLength;
+        if (currentLength >= maxLength) {
+            charCount.style.color = 'red';
+        } else {
             charCount.style.color = 'inherit';
-        });
+        }
     });
+    
+    dummySubmitButton.addEventListener("click", function() {
+        const currentLength = textarea.value.length;
+        alert("送信ボタンが押されました！\n（フォームの送信処理はキャンセルされています）");
+        textarea.value = '';
+        charCount.textContent = '0';
+        charCount.style.color = 'inherit';
+    });
+
     </script>
 </body>
 </html>
