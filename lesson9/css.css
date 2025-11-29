@@ -1,27 +1,23 @@
-/* 基本リセット */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ページ全体の背景色（不要なら上書き可） */
 html, body {
   height: 100%;
-  background-color: #c3dda8; /* ページの背景色（左右の外側に見える部分）*/
+  background-color: #c3dda8;
 }
 
-/* コンテナを画面高さに合わせる */
 .container {
   display: flex;
-  min-height: 100vh; /* ビューポートの高さに合わせる */
+  min-height: 100vh;
   width: 100%;
 }
 
-/* 左右の幅 */
 .left {
   flex: 1 1 50%;
-  background-color: #e6c9a8; /* 左の色 */
+  background-color: #5beb33;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,20 +26,18 @@ html, body {
 
 .right {
   flex: 1 1 50%;
-  background-color: #e0e0e0; /* 右の色 */
+  background-color: #8e8edf
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px;
 }
 
-/* 内部コンテンツの幅制限（見た目を整える） */
 .inner {
   max-width: 900px;
   width: 100%;
 }
 
-/* 見出し・本文の調整 */
 .left h1, .right h2 {
   color: #3a3a3a;
   margin-bottom: 12px;
@@ -53,8 +47,8 @@ html, body {
   line-height: 1.6;
 }
 
-/* スマホ（縦並びに切り替え） */
-@media (max-width: 800px) {
+/* スマホ向け（画面幅が600px以下） */
+@media (max-width: 600px) {
   .container {
     flex-direction: column;
   }
@@ -64,9 +58,10 @@ html, body {
   }
 }
 
-/* さらに小さい画面での調整（任意） */
+/* さらに小さい画面での調整
 @media (max-width: 400px) {
   .inner { padding: 0 8px; }
   .left h1 { font-size: 1.4rem; }
   .right h2 { font-size: 1.1rem; }
-}
+}*/
+
