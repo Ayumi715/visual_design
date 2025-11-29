@@ -26,7 +26,7 @@ html, body {
 
 .right {
   flex: 1 1 50%;
-  background-color: #8e8edf
+  background-color: #8e8edf;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,4 +64,5 @@ html, body {
   .left h1 { font-size: 1.4rem; }
   .right h2 { font-size: 1.1rem; }
 }*/
+
 
