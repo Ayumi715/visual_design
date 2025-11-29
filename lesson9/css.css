@@ -19,8 +19,6 @@ html, body {
   flex: 1 1 50%;
   background-color: #5beb33;
   display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 40px;
 }
 
@@ -28,8 +26,6 @@ html, body {
   flex: 1 1 50%;
   background-color: #8e8edf;
   display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 40px;
 }
 
@@ -47,8 +43,8 @@ html, body {
   line-height: 1.6;
 }
 
-/* スマホ向け */
-@media (max-width: 600px) {
+/* スマホ */
+@media (max-width: 800px) {
   .container {
     flex-direction: column;
   }
