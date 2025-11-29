@@ -43,7 +43,7 @@ html, body {
   line-height: 1.6;
 }
 
-/* スマホ */
+/* スマホ（縦並びに切り替え） */
 @media (max-width: 800px) {
   .container {
     flex-direction: column;
