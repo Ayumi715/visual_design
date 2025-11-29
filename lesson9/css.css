@@ -47,7 +47,7 @@ html, body {
   line-height: 1.6;
 }
 
-/* スマホ向け（画面幅が600px以下） */
+/* スマホ向け */
 @media (max-width: 600px) {
   .container {
     flex-direction: column;
@@ -57,12 +57,3 @@ html, body {
     padding: 24px;
   }
 }
-
-/* さらに小さい画面での調整
-@media (max-width: 400px) {
-  .inner { padding: 0 8px; }
-  .left h1 { font-size: 1.4rem; }
-  .right h2 { font-size: 1.1rem; }
-}*/
-
-
