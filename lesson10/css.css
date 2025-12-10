@@ -1,0 +1,61 @@
+/* 基本リセット */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ページ全体の背景色（不要なら上書き可） */
+html, body {
+  height: 100%;
+  background-color: #c3dda8; /* ページの背景色（左右の外側に見える部分）*/
+}
+
+/* コンテナを画面高さに合わせる */
+.container {
+  display: flex;
+  min-height: 100vh; /* ビューポートの高さに合わせる */
+  width: 100%;
+}
+
+/* 左右の幅 */
+.left {
+  flex: 1 1 50%;
+  background-color: #e6c9a8; /* 左の色 */
+  display: flex;
+  padding: 40px;
+}
+
+.right {
+  flex: 1 1 50%;
+  background-color: #e0e0e0; /* 右の色 */
+  display: flex;
+  padding: 40px;
+}
+
+/* 内部コンテンツの幅制限（見た目を整える） */
+.inner {
+  max-width: 900px;
+  width: 100%;
+}
+
+/* 見出し・本文の調整 */
+.left h1, .right h2 {
+  color: #3a3a3a;
+  margin-bottom: 12px;
+}
+.left p, .right p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* スマホ（縦並びに切り替え） */
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+  .left, .right {
+    width: 100%;
+    padding: 24px;
+  }
+}
