@@ -1,0 +1,105 @@
+.nav-green {
+  background-color: #375230;
+}
+
+.nav-green .nav-link,
+.nav-green .navbar-brand {
+  color: #fff;
+}
+
+.nav-green .nav-link:hover,
+.nav-green .dropdown-item:hover {
+  background-color: #c3dda8;
+  color: #375230;
+}
+
+.nav-green .dropdown-menu {
+  background-color: #375230;
+}
+
+.nav-green .dropdown-item {
+  color: #fff;
+}
+
+html,body{
+  background-color:#c3dda8;
+  margin: 0;
+  height:100%
+}
+
+.left-area {
+  background-color: #e6c9a8;
+  min-height: 100vh;
+}
+
+.right-area {
+  background-color: #e0e0e0;
+  min-height: 100vh;
+}
+
+section {
+  background-color: #e6c9a8;
+  margin: 0;
+  padding: 0;
+}
+
+.breadth {/*コースメニュー横並び*/
+  /*background-color: #dce6a8;*/
+  padding: 40px 20px;
+  text-align: center;
+}
+.menu-container {
+  display: flex;
+  justify-content: center; /* 中央寄せ */
+  align-items: flex-start;
+  gap: 20px;               /* カード同士の余白 */
+}
+
+.menu-item {
+  width: 28%;              /* 3枚並ぶように調整（余白込み） */
+  /*background-color: #e7b67b;*/
+  background-color: #dce6a8;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 画像をカード幅に合わせて調整 */
+.menu-item img {
+  width: 100%;
+  height: 220px;          /* ← 統一したい高さを指定 */
+  object-fit: cover;      /* 画像をトリミングして均一表示 */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* ホバーしたときの動き（浮かび上がる） */
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+/* スマホ・狭い画面では縦並び */
+@media (max-width: 768px) {
+
+  .menu-container {
+    flex-direction: column;   /* 横 → 縦 */
+    align-items: center;      /* 中央寄せ */
+  }
+
+  .menu-item {
+    flex-direction: column;
+    width: 90%;
+  }
+
+}
+
+footer {
+  background: #db9c44;
+  color: #fff;
+  text-align: center;
+  gap: 10px;
+  padding: 10px;
+  font-size: 0.9em;
+}
